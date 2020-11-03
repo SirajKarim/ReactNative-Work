@@ -1,20 +1,22 @@
+
     import React from 'react';
     import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button  } from 'react-native';
 
-    export default function LoginForm() {
+    export default function RegistrationForm() {
     return (
         <View style={styles.container}>
-        <Text style = {styles.heading}>LOGIN</Text>
+        <Text style = {styles.heading}>SIGNUP</Text>
         <View style = {styles.innercontainer}>
         <TextInput style = {styles.txtBox}  value = "Email"/>
         <TextInput style = {styles.txtBox}  value = "Password" />
+        <TextInput style = {styles.txtBox}  value = "Repeat Password" />
         <TouchableOpacity style={styles.appButtonContainer}>
-            <Text style={styles.appButtonText}>Login</Text>
+            <Text style={styles.appButtonText}>SignUp</Text>
         </TouchableOpacity>
         </View>
-        <Text style = {styles.signupDire} >Not a member ?
+        <Text style = {styles.signupDire} >Already a member ?
             <TouchableOpacity>
-            <Text style = {styles.tot}> Register Here</Text>
+            <Text style = {styles.tot}> Login Here</Text>
             </TouchableOpacity>
         </Text>
         </View>
@@ -37,7 +39,7 @@
     },
     innercontainer: {
     width:'80%',
-    height:'40%',
+    height:'50%',
     backgroundColor: 'white',
     borderWidth: 5,
     borderColor: 'lightgrey',
