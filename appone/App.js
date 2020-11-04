@@ -1,13 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button  } from 'react-native';
 import LoginForm from './screens/loginscreen'
+import Products from './screens/productsscreen';
+import Rooms from './screens/roomsscreen';
+import Rough from './screens/rough';
 import RegistrationForm from './screens/signup'
+import StatusScreen from "./screens/statusscreen";
 
 export default function App() {
   return (
   //  // <View Style = {styles.container}>
     //  <LoginForm />
-    <RegistrationForm />
+   //  <RegistrationForm />
+      //  <StatusScreen />
+      // <Products />
+      // <Rooms />
+      <Rough />
   //  // </View>
    
   );
