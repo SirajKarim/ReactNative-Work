@@ -3,7 +3,9 @@ import { StyleSheet,View,Text } from 'react-native';
 import { Card, Button,Title,Paragraph  } from 'react-native-paper';
 import TopHeader from '../components/header';
 import SwitchBtn from '../components/switch';
-
+import ValSlider from '../components/slider'
+import Dimmer from '../components/dimmer';
+import { MaterialIcons } from '@expo/vector-icons';
 
 function ControlScreen() {
     return (
@@ -38,14 +40,18 @@ function ControlScreen() {
              </View>
              <View style = {styles.container}>
                  <View style={styles.tile}>
+                 <View style = {styles.sldr}><Dimmer /></View>
                  </View>
                  <View style={styles.tile}>
-                
+                 <MaterialIcons name="add-box" size={44} color="black" style = {{alignItems: 'center'}}/>
                  </View>
                
              </View>
              <View style = {styles.container}>
                  <View style={styles.rgbtile}>
+                     <View style = {styles.sldr}><ValSlider  colour = "red"/></View>
+                     <View style = {styles.sldr}><ValSlider  colour = "green"/></View>
+                     <View style = {styles.sldr}><ValSlider colour = "blue"/></View>
                  </View>
                 
                
@@ -86,7 +92,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: '4%'
 
-    }
+    },
+    sldr: {
+       alignItems: 'center'
+
+    },
 });
 
 export default ControlScreen; 
