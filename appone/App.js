@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button  } from 'react-native';
+import ControlScreen from './screens/controlscreen';
 import LoginForm from './screens/loginscreen'
 import Products from './screens/productsscreen';
 import Rooms from './screens/roomsscreen';
@@ -15,7 +16,8 @@ export default function App() {
       //  <StatusScreen />
       // <Products />
       // <Rooms />
-      <Rough />
+      // <Rough />
+      <ControlScreen />
   //  // </View>
    
   );
