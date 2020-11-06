@@ -13,42 +13,52 @@ function ControlScreen() {
              <TopHeader heading = "Room Controls"/>
              <View style = {styles.container}>
                  <View style={styles.tile}>
+                     <Text style = {styles.myheading}>Switch 1</Text>
                      <SwitchBtn />
                  </View>
                  <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Switch 2</Text>
                  <SwitchBtn />
                  </View>
               
              </View>
              <View style = {styles.container}>
                  <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Switch 3</Text>
                  <SwitchBtn />
                  </View>
                  <View style={styles.tile}>
-                 <SwitchBtn />
-                 </View>
-               
-             </View>
-             <View style = {styles.container}>
-                 <View style={styles.tile}>
-                 <SwitchBtn />
-                 </View>
-                 <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Switch 4</Text>
                  <SwitchBtn />
                  </View>
                
              </View>
              <View style = {styles.container}>
                  <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Switch 5</Text>
+                 <SwitchBtn />
+                 </View>
+                 <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Socket</Text>
+                 <SwitchBtn />
+                 </View>
+               
+             </View>
+             <View style = {styles.container}>
+                 <View style={styles.tile}>
+                 <Text  style = {styles.myheading}>Dimmer</Text>
                  <View style = {styles.sldr}><Dimmer /></View>
                  </View>
                  <View style={styles.tile}>
-                 <MaterialIcons name="add-box" size={44} color="black" style = {{alignItems: 'center'}}/>
+                 <Text  style = {styles.myheading}>Add Button</Text>
+                 <View style = {styles.sldr}><MaterialIcons name="add-box" size={44} color="black" style = {{alignItems: 'center'}}/></View>
+                 
                  </View>
                
              </View>
              <View style = {styles.container}>
                  <View style={styles.rgbtile}>
+                 <Text  style = {styles.myheading}>RGB</Text>
                      <View style = {styles.sldr}><ValSlider  colour = "red"/></View>
                      <View style = {styles.sldr}><ValSlider  colour = "green"/></View>
                      <View style = {styles.sldr}><ValSlider colour = "blue"/></View>
@@ -97,6 +107,12 @@ const styles = StyleSheet.create({
        alignItems: 'center'
 
     },
+    myheading: {
+        fontSize:18,
+        fontWeight: 'bold',
+        flexWrap: 'wrap',
+        textAlign: 'center'
+    }
 });
 
 export default ControlScreen; 
