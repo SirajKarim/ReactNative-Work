@@ -1,24 +1,21 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Card, Title, Paragraph } from 'react-native-paper';
+import { Card, Title, Paragraph, TextInput  } from 'react-native-paper';
+import OutlinedInputBox from './InputBox';
+import ToggleBtn from './toggleButton';
 
 
 function MotorControlBox(props) {
     return (
         
       <View style = {styles.box}>
-        <Card>
+        <Card style = {{height: '40%', alignItems: "center"}}>
         <Card.Content>
-        <Title>Ground Tank</Title>
-        <Paragraph>Card content</Paragraph>
+        <Title style = {{textAlign: 'center'}} >Ground Tank</Title>
         </Card.Content>
+        <ToggleBtn/>
+        <OutlinedInputBox />
       </Card>
-      {/* <Card>
-        <Card.Content>
-        <Title>Overhead Tank</Title>
-        <Paragraph>Card content</Paragraph>
-        </Card.Content>
-      </Card> */}
       </View>
     );
 }
@@ -26,7 +23,7 @@ function MotorControlBox(props) {
 const styles = StyleSheet.create({
     box: {
         flex: 1,
-        padding: 10
+        padding: 10,
     }
 })
 
