@@ -15,7 +15,7 @@ function MotorControls(props) {
 const  styles =  StyleSheet.create({
     bg: {
         flex: 1,
-        backgroundColor: '#edf5ff'
+       // backgroundColor: '#edf5ff'
     }
 })
 export default MotorControls;

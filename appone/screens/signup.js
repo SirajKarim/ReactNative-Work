@@ -2,7 +2,7 @@
     import React from 'react';
     import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button  } from 'react-native';
 
-    export default function RegistrationForm() {
+    export default function RegistrationForm({navigation}) {
     return (
         <View style={styles.container}>
         <Text style = {styles.heading}>SIGNUP</Text>
@@ -15,7 +15,7 @@
         </TouchableOpacity>
         </View>
         <Text style = {styles.signupDire} >Already a member ?
-            <TouchableOpacity>
+            <TouchableOpacity  onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.tot}> Login Here</Text>
             </TouchableOpacity>
         </Text>

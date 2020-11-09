@@ -1,7 +1,9 @@
     import React from 'react';
     import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button  } from 'react-native';
+    import { NavigationContainer } from '@react-navigation/native';
+    import { createStackNavigator } from '@react-navigation/stack';
 
-    export default function LoginForm() {
+    export default function LoginForm({navigation}) {
     return (
         <View style={styles.container}>
         <Text style = {styles.heading}>LOGIN</Text>
@@ -13,7 +15,7 @@
         </TouchableOpacity>
         </View>
         <Text style = {styles.signupDire} >Not a member ?
-            <TouchableOpacity>
+            <TouchableOpacity onPress = {() => navigation.navigate('SignUp')}>
             <Text style = {styles.tot}> Register Here</Text>
             </TouchableOpacity>
         </Text>

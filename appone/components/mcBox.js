@@ -9,9 +9,16 @@ function MotorControlBox(props) {
     return (
         
       <View style = {styles.box}>
-        <Card style = {{height: '40%', alignItems: "center"}}>
+        <Card style = {{height: '40%', alignItems: "center", backgroundColor: '#deae4e'}}>
         <Card.Content>
         <Title style = {{textAlign: 'center'}} >Ground Tank</Title>
+        </Card.Content>
+        <ToggleBtn/>
+        <OutlinedInputBox />
+      </Card>
+      <Card style = {{height: '40%', alignItems: "center", marginTop: 10 , backgroundColor: '#deae4e'}}>
+        <Card.Content>
+        <Title style = {{textAlign: 'center'}} >Overhead Tank</Title>
         </Card.Content>
         <ToggleBtn/>
         <OutlinedInputBox />
@@ -23,6 +30,7 @@ function MotorControlBox(props) {
 const styles = StyleSheet.create({
     box: {
         flex: 1,
+        flexWrap: "wrap",
         padding: 10,
     }
 })
