@@ -3,10 +3,12 @@ import { View,StyleSheet } from 'react-native';
 import { Card, Title, Paragraph, Button,}  from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
+import TopHeader from '../components/header';
 
 function StatusScreen() {
     return (
         <View>
+            <TopHeader />
             <Card style = {styles.cardStyle}>
                <Card.Content>
               
