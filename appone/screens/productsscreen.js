@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet,View,Text } from 'react-native';
+import { StyleSheet,View,Text,ScrollView } from 'react-native';
 import { Appbar,Card, Button,Title,Paragraph  } from 'react-native-paper';
 
 function Products() {
     return (
-         <View>
+         <ScrollView>
                {/* AppBar Starts */}
                 <Appbar.Header style = {styles.background} >
                  <Appbar.Content title="Products"  />
@@ -72,7 +72,7 @@ function Products() {
                  </Card.Actions>
                 </Card>
                 
-         </View>
+         </ScrollView>
     );
 }
 

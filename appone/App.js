@@ -11,6 +11,7 @@ import StatusScreen from "./screens/statusscreen";
 import EngineeringTools from "./screens/etoolsscreen";
 import DeviceConfigScreen from "./screens/deviceconfigscreen";
 import Cart from "./screens/cartscreen";
+import BottomTabNavigator from "./TabNavigator";
 import MyComponent from "./screens/bottomnavigaion";
 // navigation work
 import { NavigationContainer } from '@react-navigation/native';
@@ -23,6 +24,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 // const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
+const HomeStack = createStackNavigator();
 
 export default function App() {
   return (
@@ -50,63 +52,8 @@ export default function App() {
   // Ends 
 
   <NavigationContainer>
-  <Tab.Navigator
-  activeColor="white"
-  inactiveColor="white"
-  barStyle={{ backgroundColor: '#242945' }}
-  >
-    <Tab.Screen
-     name="Home"
-     component={StatusScreen}
-     options={{
-      tabBarLabel: 'Home',
-      tabBarIcon: ({ color }) => (
-        <MaterialCommunityIcons name="home" color={color} size={26} />
-      ),
-    }} 
-     />
-    <Tab.Screen 
-    name="Tools" 
-    component={EngineeringTools} 
-    options={{
-      tabBarLabel: 'Tools',
-      tabBarIcon: ({ color }) => (
-        <FontAwesome5 name="tools" color={color} size={26}  />
-      ),
-    }} 
-    />
-    <Tab.Screen 
-    name="Products" 
-    component={Products}
-    options={{
-      tabBarLabel: 'Products',
-      tabBarIcon: ({ color }) => (
-        <FontAwesome5 name="store" size={26} color="white" />
-      ),
-    }} 
-     />
-    <Tab.Screen 
-    name="Config" 
-    component={DeviceConfigScreen} 
-    options={{
-      tabBarLabel: 'Config',
-      tabBarIcon: ({ color }) => (
-        <MaterialIcons name="settings" size={30} color="white" />
-      ),
-    }} 
-    />
-    <Tab.Screen 
-    name="Cart" 
-    component={Cart}
-    options={{
-      tabBarLabel: 'Cart',
-      tabBarIcon: ({ color }) => (
-        <FontAwesome5 name="shopping-cart" size={26} color="white" />
-      ),
-    }}  
-    />
-  </Tab.Navigator>
-</NavigationContainer>
+    <BottomTabNavigator />
+  </NavigationContainer>
   );
 }
 
